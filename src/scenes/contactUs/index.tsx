@@ -3,13 +3,12 @@ import { SelectedPage } from "../../shared/types";
 import { useForm } from "react-hook-form";
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "../../shared/HText";
-import { p } from "framer-motion/client";
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mt-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
+  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
   const {
     register,
@@ -66,7 +65,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           <form
             target="_blank"
             onSubmit={onSubmit}
-            action="https://formsubmit.co/houssambenlagha0@gmail.com"
+            action="https://formsubmit.co/005315e360c38327f35f1d81a874c3f4"
             method="POST"
           >
             <input
@@ -133,7 +132,15 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-        ></motion.div>
+        >
+          <div className="md:before:content-evolvetext w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+            <img
+              className="w-full"
+              src={ContactUsPageGraphic}
+              alt="contact-us-page-graphic"
+            />
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );
