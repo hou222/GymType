@@ -8,6 +8,21 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
+  const inputStyles = `"w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white"`;
+
+  const {
+    register,
+    trigger,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (e: any) => {
+    const isValid = await trigger();
+
+    if (!isValid) {
+      e.preventDefault();
+    }
+  };
   return (
     <motion.section
       id="contactus"
@@ -47,7 +62,14 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <form target="_blank" onSubmit={onSbmit}></form>
+          <form
+            target="_blank"
+            onSubmit={onSubmit}
+            action="https://formsubmit.co/houssambenlagha0@gmail.com"
+            method="POST"
+          >
+            <input className={inputStyles} />
+          </form>
         </motion.div>
       </div>
     </motion.section>
