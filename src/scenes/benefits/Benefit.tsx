@@ -1,6 +1,5 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "../../shared/types";
-import { TicketIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
 const childVariant = {

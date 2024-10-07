@@ -7,7 +7,6 @@ import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import HText from "../../shared/HText";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
-import { p } from "framer-motion/client";
 import { BenefitType } from "@/shared/types";
 import Benefit from "./Benefit";
 import ActionButton from "../../shared/ActionButton";
